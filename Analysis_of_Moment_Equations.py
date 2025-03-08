@@ -111,7 +111,6 @@ def solve_fokker_planck_moments(D=0.2,
         moment_dict = compute_moments_up_to_order_n(P_current, x_grid, y_grid, max_order)
         moments_list.append(moment_dict)
 
-        # Update distribution
         t_val = step_idx * dt
         P_next = update_p_with_control(P_current, dx, dy, dt, D, x_grid, y_grid, t_val)
         diff_val = jnp.sum(jnp.abs(P_next - P_current))
