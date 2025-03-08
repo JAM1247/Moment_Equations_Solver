@@ -342,7 +342,7 @@ def compare_moment_methods():
     pde_Ey2 = np.array(pde_Ey2)
     pde_Exy = np.array(pde_Exy)
 
-    # --- Solve naive moment ODE system ---
+    # Solve closure moment equations
     print("Solving moments with closure...")
     t_ode, M_ode = solve_approximate_moment_equations(
         D=D, dt=dt, T=T,
